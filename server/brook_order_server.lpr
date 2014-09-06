@@ -6,14 +6,16 @@ uses
   {$IFDEF UNIX}{$IFDEF UseCThreads}
   cthreads,
   {$ENDIF}{$ENDIF}
-  Interfaces, // this includes the LCL widgetset
-  Forms;
+  //Interfaces, // this includes the LCL widgetset
+  //Forms,
+   BrookApplication, Model, ModelOpf, Brokers, dbutils;
 
 {$R *.res}
 
 begin
-  RequireDerivedFormResource := True;
-  Application.Initialize;
-  Application.Run;
+     BrookApp.Run;
+  //RequireDerivedFormResource := True;
+  //Application.Initialize;
+  //Application.Run;
 end.
 
